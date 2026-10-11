@@ -83,8 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         jsButton.addEventListener("click", function () {
 
-            jsText.textContent =
-                "¡JavaScript está funcionando correctamente en VELORIA!";
+            jsText.textContent = window.veloriaLanguage === "en"
+                ? "JavaScript is working correctly in VELORIA!"
+                : "¡JavaScript está funcionando correctamente en VELORIA!";
 
             jsText.classList.add("demo-active");
 
@@ -218,8 +219,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (!selected) {
 
-                    feedback.textContent =
-                        "No respondida.";
+                    feedback.textContent = window.veloriaLanguage === "en"
+                        ? "Not answered."
+                        : "No respondida.";
 
                     feedback.className =
                         "quiz-feedback incorrect";
@@ -236,16 +238,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     score++;
 
-                    feedback.textContent =
-                        "✓ Respuesta correcta";
+                    feedback.textContent = window.veloriaLanguage === "en"
+                        ? "✓ Correct answer"
+                        : "✓ Respuesta correcta";
 
                     feedback.className =
                         "quiz-feedback correct";
 
                 } else {
 
-                    feedback.textContent =
-                        "✗ Respuesta incorrecta";
+                    feedback.textContent = window.veloriaLanguage === "en"
+                        ? "✗ Incorrect answer"
+                        : "✗ Respuesta incorrecta";
 
                     feedback.className =
                         "quiz-feedback incorrect";
@@ -270,24 +274,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (percentage >= 90) {
 
-                message =
-                    "¡Excelente trabajo!";
+                message = window.veloriaLanguage === "en"
+                    ? "Excellent work!"
+                    : "¡Excelente trabajo!";
 
             } else if (percentage >= 70) {
 
-                message =
-                    "¡Muy bien! Puedes seguir repasando.";
+                message = window.veloriaLanguage === "en"
+                    ? "Very good! You can keep reviewing."
+                    : "¡Muy bien! Puedes seguir repasando.";
 
             } else {
 
-                message =
-                    "Te recomendamos repasar los temas.";
+                message = window.veloriaLanguage === "en"
+                    ? "We recommend reviewing the topics."
+                    : "Te recomendamos repasar los temas.";
 
             }
 
 
             result.innerHTML =
-                `<strong>Resultado: ${score}/${total}</strong>
+                `<strong>${window.veloriaLanguage === "en" ? "Result" : "Resultado"}: ${score}/${total}</strong>
                 <br>
                 ${percentage}%
                 <br>
@@ -325,8 +332,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("formMessage");
 
 
-            formMessage.textContent =
-                "✓ Gracias por contactar con VELORIA. Tu mensaje fue registrado como demostración.";
+            formMessage.textContent = window.veloriaLanguage === "en"
+                ? "✓ Thank you for contacting VELORIA. Your message was recorded as a demonstration."
+                : "✓ Gracias por contactar con VELORIA. Tu mensaje fue registrado como demostración.";
 
 
             formMessage.style.display =
@@ -338,5 +346,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
+    
+const botonMusica = document.getElementById("boton-musica");
+const musica = document.getElementById("musica-veloria");
+
+if (botonMusica && musica) {
+  botonMusica.addEventListener("click", async () => {
+    if (musica.paused) {
+      try {
+        await musica.play();
+        botonMusica.textContent = "Ⅱ Pausar música";
+      } catch (error) {
+        botonMusica.textContent = "♫ Intenta reproducir";
+      }
+    } else {
+      musica.pause();
+      botonMusica.textContent = "♫ Reproducir música";
+    }
+  });
+}
+
 
 });

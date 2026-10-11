@@ -882,3 +882,54 @@ code {
     }
 
 }
+
+/* SELECTOR DE IDIOMA */
+.language-item {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.language-select {
+    appearance: auto;
+    background: var(--white, #fff);
+    color: var(--text, #17131C);
+    border: 1px solid var(--border, #ddd);
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    min-width: 82px;
+}
+
+[data-theme="dark"] .language-select {
+    background: #17131C;
+    color: #fff;
+    border-color: #51465a;
+}
+
+@media (max-width: 991px) {
+    .language-item { margin-left: 0; margin-top: 10px; }
+}
+
+
+.boton-musica {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 9999;
+  background: #35271f;
+  color: #f8f1e7;
+  border: 1px solid #c6a875;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px #0002;
+  transition: 0.3s;
+}
+
+.boton-musica:hover {
+  background: #70523e;
+  transform: translateY(-2px);
+}
