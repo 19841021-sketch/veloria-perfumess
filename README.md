@@ -1,4 +1,4 @@
-# 🌸 Portafolio de Proyecto Web: Veloria Perfumes
+# Portafolio de Proyecto Web: Veloria Perfumes
 
 **Estudiante:** Leidy Graziella Linarez García  
 **Fecha:** 17 de octubre de 2026  
@@ -9,14 +9,14 @@
 
 ## 1. Identidad de Marca y Producto
 
-### 🌷 Ficha del producto
+### Ficha del producto
 
 - **Nombre comercial:** Veloria Perfumes.
 - **Descripción:** Veloria Perfumes es un sitio web dedicado a presentar perfumes y fragancias mediante una interfaz elegante y moderna. Permite a los visitantes conocer los productos y comunicarse mediante un formulario de contacto.
 - **Público objetivo:** Personas interesadas en perfumes, fragancias y productos relacionados con el cuidado personal.
 - **Propuesta de valor:** Ofrecer una experiencia visual atractiva para descubrir fragancias y facilitar la comunicación con los visitantes a través de un formulario web.
 
-### 🎨 Diseño visual
+### Diseño visual
 
 - **Logotipo:** Logotipo original de Veloria Perfumes.
 - **Paleta de colores:**
@@ -29,7 +29,7 @@
 
 Los colores se utilizan para mantener una identidad visual elegante y relacionada con el estilo de la marca. Los códigos deben verificarse con los colores definitivos de la página.
 
-### 🖼️ Carousel de Bootstrap
+### Carousel de Bootstrap
 
 La página principal incluye una presentación visual de productos mediante un carousel de Bootstrap, que permite mostrar diferentes imágenes dentro de un mismo espacio.
 
@@ -82,40 +82,6 @@ Su funcionamiento es el siguiente:
 La integración fue comprobada mediante una prueba y la notificación llegó correctamente al canal de Discord.
 
 **Seguridad:** La URL secreta del webhook debe mantenerse en las variables de entorno de Vercel y no publicarse en el repositorio ni en el código del navegador.
-
----
-
-## 4. Anexos y Evidencias Gráficas
-
-### Anexo 1. Integración con Discord
-
-Agregar las capturas del formulario completado con datos de prueba y la notificación recibida en el canal de Discord.
-
-![Evidencia de integración con Discord](assets/discord-webhook.png)
-
-### Anexo 2. Despliegue exitoso en Vercel
-
-Agregar una captura del panel de Vercel donde se observe el estado `Ready` y la dirección pública del sitio.
-
-![Evidencia de despliegue en Vercel](assets/vercel-status.png)
-
-### Anexo 3. Diseño responsive y Bootstrap
-
-Agregar una captura del sitio web en vista móvil mediante las herramientas de desarrollador del navegador.
-
-![Evidencia de diseño responsive](assets/responsive-mobile.png)
-
-### Anexo 4. Cuestionario interactivo
-
-Agregar una captura del cuestionario de conocimientos web con preguntas respondidas.
-
-![Evidencia del cuestionario](assets/quiz-funcionando.png)
-
-### Anexo 5. Estructura del repositorio en GitHub
-
-Agregar una captura del repositorio público donde se observe la organización de los archivos del proyecto.
-
-![Evidencia del repositorio GitHub](assets/github-repository.png)
 
 ---
 
