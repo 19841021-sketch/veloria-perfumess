@@ -83,9 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         jsButton.addEventListener("click", function () {
 
-            jsText.textContent = window.veloriaLanguage === "en"
-                ? "JavaScript is working correctly in VELORIA!"
-                : "¡JavaScript está funcionando correctamente en VELORIA!";
+            jsText.textContent =
+                "¡JavaScript está funcionando correctamente en VELORIA!";
 
             jsText.classList.add("demo-active");
 
@@ -219,9 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (!selected) {
 
-                    feedback.textContent = window.veloriaLanguage === "en"
-                        ? "Not answered."
-                        : "No respondida.";
+                    feedback.textContent =
+                        "No respondida.";
 
                     feedback.className =
                         "quiz-feedback incorrect";
@@ -238,18 +236,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     score++;
 
-                    feedback.textContent = window.veloriaLanguage === "en"
-                        ? "✓ Correct answer"
-                        : "✓ Respuesta correcta";
+                    feedback.textContent =
+                        "✓ Respuesta correcta";
 
                     feedback.className =
                         "quiz-feedback correct";
 
                 } else {
 
-                    feedback.textContent = window.veloriaLanguage === "en"
-                        ? "✗ Incorrect answer"
-                        : "✗ Respuesta incorrecta";
+                    feedback.textContent =
+                        "✗ Respuesta incorrecta";
 
                     feedback.className =
                         "quiz-feedback incorrect";
@@ -274,27 +270,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (percentage >= 90) {
 
-                message = window.veloriaLanguage === "en"
-                    ? "Excellent work!"
-                    : "¡Excelente trabajo!";
+                message =
+                    "¡Excelente trabajo!";
 
             } else if (percentage >= 70) {
 
-                message = window.veloriaLanguage === "en"
-                    ? "Very good! You can keep reviewing."
-                    : "¡Muy bien! Puedes seguir repasando.";
+                message =
+                    "¡Muy bien! Puedes seguir repasando.";
 
             } else {
 
-                message = window.veloriaLanguage === "en"
-                    ? "We recommend reviewing the topics."
-                    : "Te recomendamos repasar los temas.";
+                message =
+                    "Te recomendamos repasar los temas.";
 
             }
 
 
             result.innerHTML =
-                `<strong>${window.veloriaLanguage === "en" ? "Result" : "Resultado"}: ${score}/${total}</strong>
+                `<strong>Resultado: ${score}/${total}</strong>
                 <br>
                 ${percentage}%
                 <br>
@@ -322,33 +315,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     if (contactForm) {
-
-        contactForm.addEventListener("submit", function (event) {
-
+        contactForm.addEventListener("submit", async function (event) {
             event.preventDefault();
 
+            const formMessage = document.getElementById("formMessage");
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const payload = {
+                nombre: document.getElementById("nombre").value.trim(),
+                correo: document.getElementById("correo").value.trim(),
+                asunto: document.getElementById("asunto").value.trim(),
+                mensaje: document.getElementById("mensaje").value.trim()
+            };
 
-            const formMessage =
-                document.getElementById("formMessage");
+            formMessage.style.display = "block";
+            formMessage.textContent = "Enviando tu mensaje...";
+            submitButton.disabled = true;
 
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
 
-            formMessage.textContent = window.veloriaLanguage === "en"
-                ? "✓ Thank you for contacting VELORIA. Your message was recorded as a demonstration."
-                : "✓ Gracias por contactar con VELORIA. Tu mensaje fue registrado como demostración.";
+                const result = await response.json().catch(() => ({}));
 
+                if (!response.ok) {
+                    throw new Error(result.error || "No se pudo enviar el mensaje.");
+                }
 
-            formMessage.style.display =
-                "block";
-
-
-            contactForm.reset();
-
+                formMessage.textContent = "✓ Gracias por contactar con VELORIA. Tu mensaje fue enviado correctamente.";
+                contactForm.reset();
+            } catch (error) {
+                formMessage.textContent = "No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.";
+                console.error("Error enviando formulario:", error);
+            } finally {
+                submitButton.disabled = false;
+            }
         });
-
     }
-
-    
-const botonMusica = document.getElementById("boton-musica");
+    const botonMusica = document.getElementById("boton-musica");
 const musica = document.getElementById("musica-veloria");
 
 if (botonMusica && musica) {
@@ -367,5 +373,6 @@ if (botonMusica && musica) {
   });
 }
 
-
 });
+
+
