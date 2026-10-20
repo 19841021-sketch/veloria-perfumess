@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VELORIA | JavaScript</title>
+    <title>VELORIA PERFUMES | Nosotros</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,8 @@
     <div class="container">
 
         <a class="navbar-brand" href="index.html">
-            <img src="./img/43ada241-5967-4d22-9099-e7e84b31c5b8.png" class="logo" alt="VELORIA">
+            <img src="./img/43ada241-5967-4d22-9099-e7e84b31c5b8.png"
+                 class="logo" alt="VELORIA PERFUMES">
         </a>
 
         <button class="navbar-toggler"
@@ -33,268 +35,245 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-
             <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link active" href="javascript.html">JavaScript</a></li>
-                <li class="nav-item"><a class="nav-link" href="jquery.html">jQuery</a></li>
-                <li class="nav-item"><a class="nav-link" href="json.html">JSON</a></li>
-                <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
-                <li class="nav-item"><a class="nav-link" href="cuestionario.html">Cuestionario</a></li>
-                <li class="nav-item"><a class="nav-link" href="google.html">Google</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
 
                 <li class="nav-item">
-                    <button id="themeToggle" class="theme-button">◐</button>
+                    <a class="nav-link" href="catalogo.html">Catálogo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="javascript.html">Nosotros</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+
+                <li class="nav-item">
+                    <button id="themeToggle" class="theme-button" type="button">◐</button>
                 </li>
 
                 <li class="nav-item language-item">
-                    <label class="visually-hidden" for="languageSelect">Idioma / Language</label>
-                    <select id="languageSelect" class="language-select" aria-label="Idioma / Language">
-                        <option value="es">🇪🇸 ES</option>
-                        <option value="en">🇬🇧 EN</option>
+                    <label class="visually-hidden" for="languageSelect">
+                        Idioma / Language
+                    </label>
+
+                    <select id="languageSelect" class="language-select"
+                            aria-label="Idioma / Language">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
                     </select>
                 </li>
 
             </ul>
-
         </div>
     </div>
 </nav>
 
 
 <header class="page-header">
-
     <div class="container">
 
-        <p class="eyebrow">DESARROLLO WEB</p>
+        <p class="eyebrow">CONOCE NUESTRA ESENCIA</p>
 
         <h1>
-            JavaScript <em>Vanilla.</em>
+            Sobre <em>nosotros.</em>
         </h1>
 
         <p>
-            El lenguaje que permite agregar comportamiento e
-            interactividad a las páginas web.
+            Detrás de cada fragancia existe una historia,
+            una emoción y una esencia que nos hace únicos.
         </p>
 
     </div>
-
 </header>
 
 
 <section class="section">
-
     <div class="container">
 
-        <div class="content-width">
+        <div class="row align-items-center g-5">
 
-            <h2>¿Qué es JavaScript?</h2>
+            <div class="col-lg-6">
+                <img src="./img/perfume veloria.webp"
+                     class="img-fluid rounded"
+                     alt="Fragancias de VELORIA PERFUMES">
+            </div>
 
-            <p>
-                JavaScript es un lenguaje de programación utilizado
-                principalmente para crear páginas web interactivas.
-                Permite modificar contenido, responder a acciones
-                del usuario y controlar diferentes comportamientos
-                de una página.
-            </p>
+            <div class="col-lg-6">
 
-            <h3>¿Para qué se utiliza?</h3>
+                <p class="eyebrow">NUESTRA HISTORIA</p>
 
-            <p>
-                Se utiliza para crear botones interactivos, formularios,
-                animaciones, menús, validaciones, galerías, calculadoras
-                y muchas otras funciones.
-            </p>
+                <h2>
+                    Una esencia que deja
+                    <em>huella.</em>
+                </h2>
 
+                <p>
+                    VELORIA PERFUMES nace como una propuesta dedicada
+                    al mundo de las fragancias, inspirada en la elegancia,
+                    el estilo y la importancia de expresar nuestra
+                    personalidad a través de un aroma.
+                </p>
+
+                <p>
+                    Nuestra idea es ofrecer una experiencia en la que
+                    cada persona pueda descubrir perfumes que se adapten
+                    a sus gustos, momentos especiales y forma de ser.
+                </p>
+
+                <p>
+                    Creemos que un perfume es mucho más que una fragancia:
+                    puede acompañar recuerdos, transmitir emociones
+                    y convertirse en parte de nuestra identidad.
+                </p>
+
+            </div>
         </div>
-
-
-        <div class="table-responsive mt-5">
-
-            <table class="comparison-table">
-
-                <thead>
-
-                    <tr>
-                        <th>Tecnología</th>
-                        <th>Función principal</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>HTML</td>
-                        <td>Define la estructura y contenido.</td>
-                    </tr>
-
-                    <tr>
-                        <td>CSS</td>
-                        <td>Define diseño, colores y apariencia.</td>
-                    </tr>
-
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>Añade comportamiento e interactividad.</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
     </div>
-
 </section>
 
 
 <section class="section section-light">
-
     <div class="container">
+
+        <div class="section-title text-center">
+            <p>LO QUE NOS REPRESENTA</p>
+
+            <h2>
+                Nuestra esencia,
+                <em>nuestro propósito.</em>
+            </h2>
+        </div>
 
         <div class="row g-4">
 
             <div class="col-md-4">
-
-                <div class="info-box">
-
-                    <h3>Variables</h3>
+                <div class="info-box h-100">
+                    <h3>¿Quiénes somos?</h3>
 
                     <p>
-                        Permiten almacenar datos que pueden utilizarse
-                        durante la ejecución de un programa.
+                        Somos VELORIA PERFUMES, una propuesta de perfumería
+                        que busca acercar fragancias elegantes y modernas
+                        a personas con diferentes gustos y estilos.
                     </p>
-
-                    <pre><code>let perfume = "VELORIA";</code></pre>
-
                 </div>
-
             </div>
 
-
             <div class="col-md-4">
-
-                <div class="info-box">
-
-                    <h3>Funciones</h3>
+                <div class="info-box h-100">
+                    <h3>Nuestra misión</h3>
 
                     <p>
-                        Son bloques de código que realizan una tarea
-                        específica.
+                        Ofrecer una selección de fragancias que permita
+                        a nuestros clientes encontrar aromas acordes
+                        con su personalidad, sus preferencias y sus
+                        ocasiones especiales.
                     </p>
-
-                    <pre><code>function saludar() {
-    alert("Bienvenido");
-}</code></pre>
-
                 </div>
-
             </div>
 
-
             <div class="col-md-4">
-
-                <div class="info-box">
-
-                    <h3>Eventos</h3>
+                <div class="info-box h-100">
+                    <h3>Nuestra visión</h3>
 
                     <p>
-                        Permiten ejecutar acciones cuando el usuario
-                        interactúa con la página.
+                        Crecer como una marca reconocida por su elegancia,
+                        su estilo y la experiencia que brinda al ayudar
+                        a cada persona a encontrar su propia esencia.
                     </p>
-
-                    <pre><code>button.addEventListener(
-"click", funcion
-);</code></pre>
-
                 </div>
-
             </div>
 
         </div>
-
     </div>
-
 </section>
 
 
 <section class="section">
+    <div class="container">
 
-    <div class="container text-center">
+        <div class="row align-items-center g-5">
 
-        <p class="eyebrow">EJEMPLO PRÁCTICO</p>
+            <div class="col-lg-6">
 
-        <h2>
-            JavaScript en <em>acción.</em>
-        </h2>
+                <p class="eyebrow">NUESTROS VALORES</p>
 
-        <p>
-            Presiona el botón para modificar el contenido de la página.
-        </p>
+                <h2>
+                    Lo que hace especial a
+                    <em>VELORIA.</em>
+                </h2>
 
-        <button id="jsDemoButton" class="btn btn-veloria">
-            Probar JavaScript
-        </button>
+                <p>
+                    Queremos que nuestra marca transmita confianza,
+                    elegancia y atención a los gustos de cada cliente.
+                </p>
 
-        <div id="jsDemoText" class="demo-box mt-4">
-            Aquí aparecerá el resultado.
+                <ul>
+                    <li><strong>Elegancia:</strong> una identidad cuidada y sofisticada.</li>
+                    <li><strong>Calidad:</strong> interés por ofrecer una buena experiencia.</li>
+                    <li><strong>Estilo:</strong> fragancias para distintas personalidades.</li>
+                    <li><strong>Atención:</strong> escuchar y orientar a nuestros clientes.</li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-6">
+                <img src="./img/coleccion inicio 1.avif"
+                     class="img-fluid rounded"
+                     alt="Colección de fragancias">
+            </div>
+
         </div>
-
-
-        <div class="code-block mt-5">
-
-<pre><code>const boton = document.getElementById("jsDemoButton");
-
-boton.addEventListener("click", function () {
-
-    document.getElementById("jsDemoText")
-        .textContent = "¡JavaScript está funcionando!";
-
-});</code></pre>
-
-        </div>
-
     </div>
-
 </section>
 
 
-<section class="resources-section">
+<section class="cta-section">
+    <div class="container text-center">
 
-    <div class="container">
+        <p class="eyebrow">ENCUENTRA TU ESENCIA</p>
 
-        <h3>Fuentes de consulta</h3>
+        <h2>
+            Hay un aroma para cada historia.
+        </h2>
 
-        <ul>
-            <li>MDN Web Docs — JavaScript</li>
-            <li>JavaScript.info</li>
-            <li>Documentación oficial de ECMAScript</li>
-        </ul>
+        <p>
+            Explora nuestra colección y descubre la fragancia
+            que mejor representa tu estilo.
+        </p>
+
+        <a href="catalogo.html" class="btn btn-veloria">
+            Explorar catálogo
+        </a>
 
     </div>
-
 </section>
 
 
 <footer class="footer">
-
     <div class="container">
 
         <h3>VELORIA</h3>
 
         <p>Más que un aroma, es tu esencia.</p>
 
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="javascript.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
         <div class="footer-bottom">
-            <p>© 2026 VELORIA PERFUMES · Proyecto académico</p>
+            <p>© 2026 VELORIA PERFUMES</p>
         </div>
 
     </div>
-
 </footer>
 
 
@@ -304,3 +283,4 @@ boton.addEventListener("click", function () {
 
 </body>
 </html>
+```

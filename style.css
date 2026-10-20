@@ -933,3 +933,20 @@ code {
   transform: translateY(-2px);
 }
 
+/* Botón de ubicación de VELORIA PERFUMES */
+.btn-veloria {
+    background-color: #B89562;
+    color: #ffffff;
+    border: 1px solid #B89562;
+    border-radius: 30px;
+    padding: 12px 26px;
+    transition: all 0.3s ease;
+}
+
+.btn-veloria:hover {
+    background-color: #8C6A3F;
+    border-color: #8C6A3F;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
